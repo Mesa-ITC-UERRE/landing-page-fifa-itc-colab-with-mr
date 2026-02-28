@@ -7,29 +7,33 @@ import { Calendar } from '@/components/ui/calendar'
 import Marquee from '@/components/ui/marquee'
 import { Footer } from '@/components/Footer'
 import ImageCard from '@/components/ui/image-card'
+import { Button } from '@/components/ui/button'
+import { Counter } from '@/components/Counter'
 
 const marqueeHeaderItems = ['Mesa ITC', 'Manos Regias', '2026', 'Primer torneo interno de Fifa']
 const tournamentDate = '2026-03-20T10:00:00-06:00'
 ---
 
 <Layout>
-  <Header
-    countdownDate={tournamentDate}
-    client:load
-  />
+  <Header />
   <Marquee items={marqueeHeaderItems} />
   <main class="mt-20 text-center px-10">
     <section class="mb-20">
-      <h2 class="text-2xl font-bold mb-4">Fecha del torneo</h2>
+      <h2 class="text-3xl font-bold mb-4">Fecha del torneo</h2>
       <Calendar
         mode="single"
         selected={new Date()}
         onSelect={(date) => console.log(date)}
-        className="w-fit mx-auto"
+        className="mb-10 w-fit mx-auto"
+      />
+      <Counter
+        targetDate={tournamentDate}
+        client:load
       />
     </section>
+
     <section class="mb-20">
-      <h2 class="text-2xl font-bold mb-4">Invitados especiales</h2>
+      <h2 class="text-3xl font-bold mb-4">Invitados especiales</h2>
       <ImageCard
         caption="Linus Torvalds nuestro comentarista"
         imageUrl="https://www.silicon.fr/wp-content/uploads/2025/09/Linus-Torvalds-egoisme-est-origine-succes-F.jpg"
@@ -38,11 +42,13 @@ const tournamentDate = '2026-03-20T10:00:00-06:00'
     </section>
 
     <section class="mb-20">
-      <h2 class="text-2xl font-bold mb-4">Registro</h2>
+      <h2 class="text-3xl font-bold mb-4">Registro</h2>
       <p>CODIOG QR EPICO PARA REGISTRARSE</p>
+      <Button>Registrate aquí</Button>
     </section>
+
     <section class="mb-20">
-      <h2 class="text-2xl font-bold mb-4">Reglas del torneo</h2>
+      <h2 class="text-3xl font-bold mb-4">Reglas del torneo</h2>
       <Rules client:load />
     </section>
   </main>

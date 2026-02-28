@@ -116,7 +116,6 @@ export const Counter = ({ targetDate, className }: CounterProps) => {
         <p className="text-xs font-heading uppercase tracking-[0.35em] text-foreground/70">
           Cuenta regresiva
         </p>
-        <p className="mt-2 text-sm font-base text-foreground/80">Dias, horas, minutos y segundos restantes</p>
       </div>
 
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
@@ -137,13 +136,6 @@ export const Counter = ({ targetDate, className }: CounterProps) => {
           </article>
         ))}
       </div>
-
-      <p
-        suppressHydrationWarning
-        className="mt-4 text-center text-sm font-base text-foreground"
-      >
-        {timeLeft.totalMilliseconds > 0 ? 'El torneo aun no comienza.' : 'El contador llego a cero.'}
-      </p>
     </section>
   )
 }

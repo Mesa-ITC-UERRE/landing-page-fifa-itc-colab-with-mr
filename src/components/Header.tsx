@@ -1,11 +1,7 @@
-import { Counter } from '@/components/Counter'
 import logo from '../assets/logo.png'
+import { Button } from './ui/button'
 
-type HeaderProps = {
-  countdownDate: Date | string | number
-}
-
-export const Header = ({ countdownDate }: HeaderProps) => {
+export const Header = () => {
   return (
     <header className="m-10 flex flex-col gap-5 justify-center items-center">
       <img
@@ -20,7 +16,7 @@ export const Header = ({ countdownDate }: HeaderProps) => {
         Inscribete al primer torneo interno de Fifa de la U-ERRE, en colaboracion con la Mesa ITC y Manos
         Regias
       </p>
-      <Counter targetDate={countdownDate} />
+      <Button>Registrate aquí</Button>
     </header>
   )
 }
