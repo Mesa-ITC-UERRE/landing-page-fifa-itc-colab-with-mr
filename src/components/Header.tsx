@@ -1,6 +1,10 @@
 import { Counter } from '@/components/Counter'
 
-export const Header = () => {
+type HeaderProps = {
+  countdownDate: Date | string | number
+}
+
+export const Header = ({ countdownDate }: HeaderProps) => {
   return (
     <header className="m-10 flex flex-col gap-5 justify-center items-center">
       <h1 className="text-4xl text-center font-bold">Torneo Interno de Fifa</h1>
@@ -8,7 +12,7 @@ export const Header = () => {
         Inscribete al primer torneo interno de Fifa de la U-ERRE, en colaboracion con la Mesa ITC y Manos
         Regias
       </p>
-      <Counter />
+      <Counter targetDate={countdownDate} />
     </header>
   )
 }
