@@ -6,6 +6,7 @@ import { Header } from '@/components/Header'
 import { Calendar } from '@/components/ui/calendar'
 import Marquee from '@/components/ui/marquee'
 import { Footer } from '@/components/Footer'
+import ImageCard from '@/components/ui/image-card'
 
 const marqueeHeaderItems = ['Mesa ITC', 'Manos Regias', '2026', 'Primer torneo interno de Fifa']
 const tournamentDate = '2026-03-20T10:00:00-06:00'
@@ -27,6 +28,15 @@ const tournamentDate = '2026-03-20T10:00:00-06:00'
         className="w-fit mx-auto"
       />
     </section>
+    <section class="mb-20">
+      <h2 class="text-2xl font-bold mb-4">Invitados especiales</h2>
+      <ImageCard
+        caption="Linus Torvalds nuestro comentarista"
+        imageUrl="https://www.silicon.fr/wp-content/uploads/2025/09/Linus-Torvalds-egoisme-est-origine-succes-F.jpg"
+        className="mx-auto"
+      />
+    </section>
+
     <section class="mb-20">
       <h2 class="text-2xl font-bold mb-4">Registro</h2>
       <p>CODIOG QR EPICO PARA REGISTRARSE</p>
