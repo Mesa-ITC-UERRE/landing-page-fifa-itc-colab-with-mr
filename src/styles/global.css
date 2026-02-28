@@ -3,6 +3,13 @@
 
 @custom-variant dark (&:is(.dark *));
 
+body {
+background: radial-gradient(circle, transparent 20%, #f0e8ff 20%, #f0e8ff 80%, transparent 80%, transparent) 0% 0% / 100px 100px, radial-gradient(circle, transparent 20%, #f0e8ff 20%, #f0e8ff 80%, transparent 80%, transparent) 50px 50px / 100px 100px, linear-gradient(#e7dbff 2px, transparent 2px) 0px -1px / 50px 50px, linear-gradient(90deg, #e7dbff 2px, #f0e8ff 2px) -1px 0px / 50px 50px #f0e8ff;
+
+background-size: 100px 100px, 100px 100px, 50px 50px, 50px 50px;
+}
+
+
 :root {
   --background: oklch(93.88% 0.033 300.19);
   --secondary-background: oklch(100% 0 0);
