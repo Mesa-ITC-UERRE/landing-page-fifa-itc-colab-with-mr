@@ -5,7 +5,7 @@ export const Rules = () => {
     <Accordion
       type="single"
       collapsible
-      className="w-full max-w-xl"
+      className="w-full max-w-xl mx-auto"
     >
       <AccordionItem value="item-1">
         <AccordionTrigger>Is it accessible?</AccordionTrigger>
