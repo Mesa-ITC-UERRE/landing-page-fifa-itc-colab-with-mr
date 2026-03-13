@@ -11,12 +11,19 @@ export const Header = () => {
         height={logo.height}
         className="h-auto w-full max-w-xs"
       />
-      <h1 className="text-4xl text-center font-bold">Torneo Interno de Fifa</h1>
+      <h1 className="text-4xl text-center font-bold">Torneo Interno EA FC 25</h1>
       <p className="text-center">
-        Inscribete al primer torneo interno de Fifa de la U-ERRE, en colaboracion con la Mesa ITC y Manos
-        Regias
+        Inscribete al torneo benefico de EA FC 25 de la U-ERRE, en colaboracion con la Mesa ITC y Manos
+        Regias.
       </p>
-      <Button>Registrate aquí</Button>
+      <p>
+        La recolección de dinero será para fondear el evento del Día del niño en la Casa Hogar de Guadalupe
+      </p>
+      <a href="https://forms.cloud.microsoft/r/hdQB9ZEfBh" target="_blank">
+        <Button>
+          Registrate aquí
+        </Button>
+      </a>
     </header>
   )
 }

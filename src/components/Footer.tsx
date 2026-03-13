@@ -3,14 +3,13 @@ export const Footer = () => {
     <footer className="mt-20 p-10 bg-violet-950 text-white flex flex-col gap-5 justify-center items-center">
       <p className="text-center"></p>
       <p className="text-center">
-        Develop by{' '}
+        Developed by{' '}
         <a
-          href="https://github.com/ch3ber"
+          href="https://github.com/Mesa-ITC-UERRE"
           className="underline"
         >
-          @ch3ber
-        </a>{' '}
-        - Mesa ITC member
+          @MESA-ITC
+        </a>
       </p>
     </footer>
   )

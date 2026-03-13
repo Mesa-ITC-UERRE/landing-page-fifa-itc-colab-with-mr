@@ -10,8 +10,8 @@ import ImageCard from '@/components/ui/image-card'
 import { Button } from '@/components/ui/button'
 import { Counter } from '@/components/Counter'
 
-const marqueeHeaderItems = ['Mesa ITC', 'Manos Regias', '2026', 'Primer torneo interno de Fifa']
-const tournamentDate = '2026-03-20T10:00:00-06:00'
+const marqueeHeaderItems = ['Mesa ITC', 'Manos Regias', '2026', 'Torneo Benefico EA FC 25']
+const tournamentDate = '2026-03-24T16:00:00-06:00'
 ---
 
 <Layout>
@@ -20,9 +20,10 @@ const tournamentDate = '2026-03-20T10:00:00-06:00'
   <main class="mt-20 text-center px-10">
     <section class="mb-20">
       <h2 class="text-3xl font-bold mb-4">Fecha del torneo</h2>
-      <Calendar
+     <Calendar
         mode="single"
-        selected={new Date()}
+        selected={new Date(2026, 2, 24)}
+        defaultMonth={new Date(2026, 2, 24)}
         onSelect={(date) => console.log(date)}
         className="mb-10 w-fit mx-auto"
       />
@@ -32,20 +33,26 @@ const tournamentDate = '2026-03-20T10:00:00-06:00'
       />
     </section>
 
-    <section class="mb-20">
+    <!-- <section class="mb-20">
       <h2 class="text-3xl font-bold mb-4">Invitados especiales</h2>
       <ImageCard
         caption="Linus Torvalds nuestro comentarista"
         imageUrl="https://www.silicon.fr/wp-content/uploads/2025/09/Linus-Torvalds-egoisme-est-origine-succes-F.jpg"
         className="mx-auto"
       />
-    </section>
+    </section> -->
 
     <section class="mb-20">
       <h2 class="text-3xl font-bold mb-4">Registro</h2>
-      <p>CODIOG QR EPICO PARA REGISTRARSE</p>
-      <Button>Registrate aquí</Button>
+
+      <a href="https://forms.cloud.microsoft/r/hdQB9ZEfBh" target="_blank">
+        <Button>
+          Registrate aquí
+        </Button>
+      </a>
     </section>
+
+    <section class="mb-20"></section>
 
     <section class="mb-20">
       <h2 class="text-3xl font-bold mb-4">Reglas del torneo</h2>
