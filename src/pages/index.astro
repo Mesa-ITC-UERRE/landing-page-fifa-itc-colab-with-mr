@@ -11,7 +11,7 @@ import { Button } from '@/components/ui/button'
 import { Counter } from '@/components/Counter'
 
 const marqueeHeaderItems = ['Mesa ITC', 'Manos Regias', '2026', 'Torneo Benefico EA FC 25']
-const tournamentDate = '2026-03-24T16:00:00-06:00'
+const tournamentDate = '2026-03-26T16:00:00-06:00'
 ---
 
 <Layout>
@@ -22,8 +22,8 @@ const tournamentDate = '2026-03-24T16:00:00-06:00'
       <h2 class="text-3xl font-bold mb-4">Fecha del torneo</h2>
      <Calendar
         mode="single"
-        selected={new Date(2026, 2, 24)}
-        defaultMonth={new Date(2026, 2, 24)}
+        selected={new Date(2026, 2, 26)}
+        defaultMonth={new Date(2026, 2, 26)}
         onSelect={(date) => console.log(date)}
         className="mb-10 w-fit mx-auto"
       />
