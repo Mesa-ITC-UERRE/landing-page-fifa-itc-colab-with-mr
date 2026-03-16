@@ -12,6 +12,7 @@ function Calendar({ className, classNames, showOutsideDays = true, ...props }: C
   return (
     <DayPicker
       showOutsideDays={showOutsideDays}
+      disableNavigation
       className={cn('rounded-base! border-2 border-border bg-main p-3 font-heading shadow-shadow', className)}
       classNames={{
         months: 'flex flex-col sm:flex-row gap-2',
