@@ -35,7 +35,7 @@ const selectedTournamentDate = new Date(2026, 2, 26)
       <div class="w-full max-w-2xl flex justify-center">
         <Counter
           targetDate={tournamentDate}
-          client:load
+          client:only="react"
         />
       </div>
     </section>
