@@ -6,58 +6,60 @@ import { Header } from '@/components/Header'
 import { Calendar } from '@/components/ui/calendar'
 import Marquee from '@/components/ui/marquee'
 import { Footer } from '@/components/Footer'
-import ImageCard from '@/components/ui/image-card'
 import { Button } from '@/components/ui/button'
 import { Counter } from '@/components/Counter'
 
 const marqueeHeaderItems = ['Mesa ITC', 'Manos Regias', '2026', 'Torneo Benefico EA FC 25']
 const tournamentDate = '2026-03-26T16:00:00-06:00'
+const selectedTournamentDate = new Date(2026, 2, 26)
 ---
 
 <Layout>
   <Header />
   <Marquee items={marqueeHeaderItems} />
+
   <main class="mt-20 text-center px-10">
-    <section class="mb-20">
+
+    <section class="mb-20 flex flex-col items-center">
       <h2 class="text-3xl font-bold mb-4">Fecha del torneo</h2>
-     <Calendar
+
+      <Calendar
         mode="single"
-        selected={new Date(2026, 2, 26)}
-        defaultMonth={new Date(2026, 2, 26)}
+        selected={selectedTournamentDate}
+        defaultMonth={selectedTournamentDate}
         onSelect={(date) => console.log(date)}
-        className="mb-10 w-fit mx-auto"
-      />
-      <Counter
-        targetDate={tournamentDate}
+        className="mb-8 w-fit"
         client:load
       />
-    </section>
 
-    <!-- <section class="mb-20">
-      <h2 class="text-3xl font-bold mb-4">Invitados especiales</h2>
-      <ImageCard
-        caption="Linus Torvalds nuestro comentarista"
-        imageUrl="https://www.silicon.fr/wp-content/uploads/2025/09/Linus-Torvalds-egoisme-est-origine-succes-F.jpg"
-        className="mx-auto"
-      />
-    </section> -->
+      <div class="w-full max-w-2xl flex justify-center">
+        <Counter
+          targetDate={tournamentDate}
+          client:load
+        />
+      </div>
+    </section>
 
     <section class="mb-20">
       <h2 class="text-3xl font-bold mb-4">Registro</h2>
 
-      <a href="https://forms.cloud.microsoft/r/hdQB9ZEfBh" target="_blank">
+      <a
+        href="https://forms.cloud.microsoft/r/hdQB9ZEfBh"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <Button>
           Registrate aquí
         </Button>
       </a>
     </section>
 
-    <section class="mb-20"></section>
-
     <section class="mb-20">
       <h2 class="text-3xl font-bold mb-4">Reglas del torneo</h2>
       <Rules client:load />
     </section>
+
   </main>
+
   <Footer />
 </Layout>
